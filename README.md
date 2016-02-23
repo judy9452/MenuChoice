@@ -25,4 +25,4 @@ demo中的类别cell没有自定义，如果需求可自定义cell
 如果您发现了bug,希望你能Issues我</br>
 如果您发现了bug,希望你能Issues我</br>
 
-![](https://github.com/judy9452/MenuChoice.git/MenuChoice.gif)
+![](https://github.com/judy9452/MenuChoice/blob/master/MenuChoice.gif)
