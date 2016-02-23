@@ -13,12 +13,11 @@ class GroupTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     var classifyTableView:UITableView!
     var productTypeArr:[String] = []
     var productNameArr:[AnyObject] = []
-    var titleArr:[String] = ["推荐商品","含酒精饮料","沙拉","披萨","鲜榨纯果汁","岩烤系列","意面","饭类","小吃","沁凉茶饮","汤","香醇奶茶","甜点","冰爽软饮","罗兰院长咖啡","暖心茶饮"]
-    var contentArr:[String] = ["swift","java","android","swift","java","android","swift","java","android"]
     var currentExtendSection:Int = 0
     var isScrollSetSelect = false
     var isScrollClassiftyTable = false
-    override init(frame: CGRect) {
+    
+    init(frame:CGRect, MenuTypeArr:[String], proNameArr:[AnyObject]) {
         super.init(frame: frame)
         self.initData()
         self.groupTableView = UITableView(frame: CGRectMake(frame.width*0.3, 0, frame.width*0.7, frame.height), style: UITableViewStyle.Plain)
@@ -44,7 +43,7 @@ class GroupTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     
     func  initData()
     {
-        let path:String = (NSBundle.mainBundle().pathForResource("DataTwo", ofType: "json"))!
+        let path:String = (NSBundle.mainBundle().pathForResource("MenuData", ofType: "json"))!
         let data:NSData = NSData(contentsOfURL: NSURL(fileURLWithPath: path))!
         let json:AnyObject = try!NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
         let resultDict = json.objectForKey("data") as! Dictionary<String,AnyObject>
@@ -95,7 +94,6 @@ class GroupTableView: UIView,UITableViewDelegate,UITableViewDataSource {
             if productNameArr[indexPath.section].count > indexPath.row
             {
                 extendCell.productNameStr = productNameArr[indexPath.section].objectAtIndex(indexPath.row) as? String
-//                extendCell.textLabel?.text = productNameArr[indexPath.section].objectAtIndex(indexPath.row) as? String
             }
             extendCell.addProClosure = {(cell:UITableViewCell,isAddProduct:Bool) in
                 let indexPath:NSIndexPath = (self.groupTableView.indexPathForCell(cell))!
@@ -183,18 +181,6 @@ class GroupTableView: UIView,UITableViewDelegate,UITableViewDataSource {
         {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             self.leftSectionSelected(indexPath, withTableView: tableView,didSelectClassifyTable:true)
-            // 抛物线关键帧动画
-    
-//            CAKeyframeAnimation *keyframeAnimation=[CAKeyframeAnimation animationWithKeyPath:@"position"];
-//            CGMutablePathRef path = CGPathCreateMutable();
-//            CGPathMoveToPoint(path, NULL, 50, 80);//移动到起始点
-//            CGPathAddQuadCurveToPoint(path, NULL, 100, 100, 100, 130);
-//            keyframeAnimation.path = path;
-//            keyframeAnimation.delegate = self;
-//            CGPathRelease(path);
-//            keyframeAnimation.duration = kAnimationDuration;
-//            [layer addAnimation:keyframeAnimation forKey:@"KCKeyframeAnimation_Position"];
-            
         }
     }
     
