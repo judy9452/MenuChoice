@@ -4,6 +4,12 @@
 
 将GroupTableView.swift,PrdouctMenuTableViewCell.swift导入到项目中即可</br>
 
+调用
+```
+init(frame:CGRect,MenuTypeArr:[String],proNameArr:[AnyObject])
+```
+初始化
+
 添加按钮的动画效果，修改第三，四个参数可改变抛物线弧度</br>
 ```
 CGPathAddQuadCurveToPoint(path, nil, 100, circleView.layer.position.y+50, 30, screenHeight-30)
