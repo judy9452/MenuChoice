@@ -2,9 +2,9 @@
 高仿外卖app的点餐页(swift)</br>
 本demo中没有加上数据库操作，所以在cell重用的时候会有bug,实际项目应按需求对数据库进行操作</br></br>
 
-将GroupTableView.swift,PrdouctMenuTableViewCell.swift导入到项目中即可</br>
+1.将GroupTableView.swift,PrdouctMenuTableViewCell.swift导入到项目中即可</br>
 
-调用
+2.调用
 ```
 init(frame:CGRect,MenuTypeArr:[String],proNameArr:[AnyObject])
 ```
