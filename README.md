@@ -11,10 +11,10 @@ CGPathAddQuadCurveToPoint(path, nil, 100, circleView.layer.position.y+50, 30, sc
 
 demo中的类别cell没有自定义，如果需求可自定义cell
 
-如果本demo对您有帮助，欢迎star
-如果本demo对您有帮助，欢迎star
-如果本demo对您有帮助，欢迎star
+如果本demo对您有帮助，欢迎star</br>
+如果本demo对您有帮助，欢迎star</br>
+如果本demo对您有帮助，欢迎star</br></br>
 
-如果您发现了bug,希望你能Issues我
-如果您发现了bug,希望你能Issues我
-如果您发现了bug,希望你能Issues我
+如果您发现了bug,希望你能Issues我</br>
+如果您发现了bug,希望你能Issues我</br>
+如果您发现了bug,希望你能Issues我</br>
