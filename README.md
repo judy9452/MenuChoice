@@ -1,10 +1,10 @@
 # MenuChoice
-高仿外卖app的点餐页(swift)
-本demo中没有加上数据库操作，所以在cell重用的时候会有bug,实际项目应按需求对数据库进行操作
+高仿外卖app的点餐页(swift)</br>
+本demo中没有加上数据库操作，所以在cell重用的时候会有bug,实际项目应按需求对数据库进行操作</br></br>
 
-将GroupTableView.swift,PrdouctMenuTableViewCell.swift导入到项目中即可
+将GroupTableView.swift,PrdouctMenuTableViewCell.swift导入到项目中即可</br>
 
-添加按钮的动画效果，修改第三，四个参数可改变抛物线弧度
+添加按钮的动画效果，修改第三，四个参数可改变抛物线弧度</br>
 ```
 CGPathAddQuadCurveToPoint(path, nil, 100, circleView.layer.position.y+50, 30, screenHeight-30)
 ```
