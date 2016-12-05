@@ -202,13 +202,17 @@
 				TargetAttributes = {
 					4EA187D41C72CE320090D978 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZD7YWK7MMQ;
+						LastSwiftMigration = 0810;
 					};
 					4EA187E81C72CE320090D978 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4EA187D41C72CE320090D978;
 					};
 					4EA187F31C72CE320090D978 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4EA187D41C72CE320090D978;
 					};
 				};
@@ -409,11 +413,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZD7YWK7MMQ;
 				INFOPLIST_FILE = MenuChoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.juanmao.MenuChoice;
+				PRODUCT_BUNDLE_IDENTIFIER = juanmao.MenuChoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -421,11 +428,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZD7YWK7MMQ;
 				INFOPLIST_FILE = MenuChoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.juanmao.MenuChoice;
+				PRODUCT_BUNDLE_IDENTIFIER = juanmao.MenuChoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -437,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juanmao.MenuChoiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenuChoice.app/MenuChoice";
 			};
 			name = Debug;
@@ -449,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juanmao.MenuChoiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenuChoice.app/MenuChoice";
 			};
 			name = Release;
@@ -460,6 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juanmao.MenuChoiceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MenuChoice;
 				USES_XCTRUNNER = YES;
 			};
@@ -472,6 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juanmao.MenuChoiceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MenuChoice;
 				USES_XCTRUNNER = YES;
 			};
@@ -496,6 +510,7 @@
 				4EA187FF1C72CE320090D978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EA188001C72CE320090D978 /* Build configuration list for PBXNativeTarget "MenuChoiceTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +519,7 @@
 				4EA188021C72CE320090D978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EA188031C72CE320090D978 /* Build configuration list for PBXNativeTarget "MenuChoiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +528,7 @@
 				4EA188051C72CE320090D978 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

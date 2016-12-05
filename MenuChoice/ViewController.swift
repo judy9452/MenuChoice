@@ -15,22 +15,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "举个🌰"
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.initData()
         self.automaticallyAdjustsScrollViewInsets = false
     }
     
     func  initData()
     {
-        let path:String = (NSBundle.mainBundle().pathForResource("MenuData", ofType: "json"))!
-        let data:NSData = NSData(contentsOfURL: NSURL(fileURLWithPath: path))!
-        let json:AnyObject = try!NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
-        let resultDict = json.objectForKey("data") as! Dictionary<String,AnyObject>
+        let path:String = (Bundle.main.path(forResource: "MenuData", ofType: "json"))!
+        let data:Data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        let json:AnyObject = try!JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as AnyObject
+        let resultDict = json.object(forKey: "data") as! Dictionary<String,AnyObject>
         let productMenuArr:[AnyObject] = resultDict["productType"] as! Array
-        for var i:Int = 0;i < productMenuArr.count; i++
+        for i:Int in 0 ..< productMenuArr.count
         {
             productTypeArr.append(productMenuArr[i]["typeName"] as! String)
-            productNameArr.append(productMenuArr[i]["productName"] as! [String])
+            productNameArr.append(productMenuArr[i]["productName"] as! [String] as AnyObject)
         }
         
         self.addSubView()
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     func addSubView(){
             ///调用时传入frame和数据源
-        let classifyTable = GroupTableView(frame: CGRectMake(0,64,screenWidth,screenHeight-64), MenuTypeArr: productTypeArr, proNameArr: productNameArr)
+        let classifyTable = GroupTableView(frame: CGRect(x: 0,y: 64,width: screenWidth,height: screenHeight-64), MenuTypeArr: productTypeArr, proNameArr: productNameArr)
         self.view.addSubview(classifyTable)
     }
 
