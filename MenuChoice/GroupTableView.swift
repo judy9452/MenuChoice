@@ -239,12 +239,18 @@ class GroupTableView: UIView,UITableViewDelegate,UITableViewDataSource {
             self.groupTableView.scrollToRow(at: IndexPath(row: 0, section:self.currentExtendSection), at: UITableViewScrollPosition.top, animated: true)
             isScrollClassiftyTable = didSelectClassifyTable
             
-                //
             let cellR:CGRect = self.classifyTableView.rectForRow(at: indexPath)
             if self.classifyTableView.contentOffset.y - cellR.origin.y > 54
             {
+                    //左边分类的tableview向上滚动（让选中的分类cell可见）
                 self.classifyTableView.contentOffset.y = CGFloat(55 * indexPath.row)
             }
+            
+            if cellR.origin.y - self.classifyTableView.frame.size.height > 0 {
+                    ////左边分类的tableview向下滚动（让选中的分类cell可见）
+                self.classifyTableView.contentOffset.y = cellR.origin.y - self.classifyTableView.frame.size.height+55
+            }
+            
         }
 
     }
@@ -262,6 +268,7 @@ class GroupTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     {
         if scrollView == self.groupTableView && isScrollSetSelect && isScrollClassiftyTable == false
         {
+                //滚动右边tableview
             let indexPathArr:[IndexPath]? =  self.groupTableView.indexPathsForVisibleRows
             self.leftSectionSelected(IndexPath(row:indexPathArr![0].section, section: 0), withTableView: self.classifyTableView,didSelectClassifyTable: false)
         }
